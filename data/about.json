@@ -1,0 +1,9 @@
+{
+    "title": "About Page",
+    "date": "2026-05-18",
+    "description": "A short description of this About page.",
+    "tags": ["technology", "research"],
+    "keywords": ["web", "development"],
+    "searchText": "Additional text used for searching.",
+    "featured": false
+}
