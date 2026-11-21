@@ -1,2 +1,206 @@
-<h1>Archive Item 1</h1>
-<p>Content of the first archive item.</p>
+<article class="archive-item">
+
+    <header class="archive-item-header">
+        <div class="archive-item-meta">
+            <span id="item-date"></span>
+            <span id="item-featured"></span>
+        </div>
+
+        <h1 id="item-title">Loading archive item...</h1>
+
+        <p id="item-description"></p>
+    </header>
+
+    <figure id="item-thumbnail" class="archive-thumbnail" hidden>
+        <img id="item-image" alt="" loading="lazy">
+        <figcaption id="item-image-caption"></figcaption>
+    </figure>
+
+    <div class="archive-item-details">
+        <section>
+            <h3>Tags</h3>
+            <div id="item-tags" class="archive-tags"></div>
+        </section>
+
+        <section>
+            <h3>Keywords</h3>
+            <div id="item-keywords" class="archive-tags"></div>
+        </section>
+    </div>
+
+    <section class="archive-item-content">
+        <h2>Content</h2>
+        <p>Content of the first archive item.</p>
+    </section>
+
+    <p id="item-status" class="archive-status" role="status"></p>
+
+</article>
+
+<style>
+.archive-item {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.archive-item-header {
+    margin-bottom: 28px;
+}
+
+.archive-item-meta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.archive-item-header h1 {
+    margin: 12px 0;
+}
+
+.archive-item-header p {
+    line-height: 1.7;
+}
+
+.archive-thumbnail {
+    margin: 28px 0;
+    text-align: center;
+}
+
+.archive-thumbnail img {
+    display: block;
+    width: 100%;
+    max-height: 520px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.archive-thumbnail figcaption {
+    margin-top: 8px;
+    font-size: 13px;
+    opacity: 0.65;
+}
+
+.archive-item-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin: 28px 0;
+    padding: 20px 0;
+    border-top: 1px solid var(--border-color, #ccc);
+    border-bottom: 1px solid var(--border-color, #ccc);
+}
+
+.archive-item-details h3 {
+    margin-top: 0;
+}
+
+.archive-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.archive-tag {
+    padding: 5px 10px;
+    border: 1px solid var(--border-color, #ccc);
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.archive-item-content {
+    line-height: 1.8;
+}
+
+.archive-status {
+    font-size: 13px;
+    opacity: 0.65;
+}
+
+@media (max-width: 600px) {
+    .archive-item-details {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<script>
+(async function () {
+    const status = document.getElementById("item-status");
+
+    function setText(id, value) {
+        document.getElementById(id).textContent = value || "";
+    }
+
+    function renderTags(id, values) {
+        const container = document.getElementById(id);
+        container.replaceChildren();
+
+        if (!Array.isArray(values)) return;
+
+        values.forEach(value => {
+            const tag = document.createElement("span");
+            tag.className = "archive-tag";
+            tag.textContent = value;
+            container.appendChild(tag);
+        });
+    }
+
+    try {
+        const metadataUrl = new URL(
+            "data/archive/folder/item-1.json",
+            document.baseURI
+        );
+
+        const response = await fetch(metadataUrl);
+
+        if (!response.ok) {
+            throw new Error(
+                `Metadata could not be loaded (${response.status})`
+            );
+        }
+
+        const metadata = await response.json();
+
+        setText("item-title", metadata.title || "Untitled item");
+        setText("item-description", metadata.description);
+        setText("item-date", metadata.date);
+        setText(
+            "item-featured",
+            metadata.featured ? "Featured" : ""
+        );
+
+        renderTags("item-tags", metadata.tags);
+        renderTags("item-keywords", metadata.keywords);
+
+        if (metadata.thumbnail) {
+            const image = document.getElementById("item-image");
+            const figure = document.getElementById("item-thumbnail");
+
+            image.alt = metadata.title || "Archive thumbnail";
+
+            image.addEventListener("load", () => {
+                figure.hidden = false;
+                status.textContent = "";
+            }, { once: true });
+
+            image.addEventListener("error", () => {
+                figure.hidden = true;
+                status.textContent = "Thumbnail image could not be loaded.";
+            }, { once: true });
+
+            image.src = new URL(
+                metadata.thumbnail,
+                document.baseURI
+            ).href;
+        }
+
+        status.textContent = "Metadata loaded successfully.";
+
+    } catch (error) {
+        console.error("Archive item error:", error);
+        status.textContent = error.message;
+    }
+})();
+</script>
