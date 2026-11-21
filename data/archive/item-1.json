@@ -1,0 +1,9 @@
+{
+    "title": "Example Archive Item 1",
+    "date": "2026-05-18",
+    "description": "A short description of this archived item.",
+    "tags": ["technology", "research"],
+    "keywords": ["web", "development"],
+    "searchText": "Additional text used for searching.",
+    "featured": false
+}
