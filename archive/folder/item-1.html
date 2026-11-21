@@ -175,27 +175,27 @@
         renderTags("item-keywords", metadata.keywords);
 
         if (metadata.thumbnail) {
-            const image = document.getElementById("item-image");
-            const figure = document.getElementById("item-thumbnail");
+    const image = document.getElementById("item-image");
+    const figure = document.getElementById("item-thumbnail");
 
-            image.alt = metadata.title || "Archive thumbnail";
+    image.alt = metadata.title || "Archive thumbnail";
 
-            image.addEventListener("load", () => {
-                figure.hidden = false;
-                status.textContent = "";
-            }, { once: true });
+    image.addEventListener("load", () => {
+        status.textContent = "Metadata and thumbnail loaded successfully.";
+    }, { once: true });
 
-            image.addEventListener("error", () => {
-                figure.hidden = true;
-                status.textContent = "Thumbnail image could not be loaded.";
-            }, { once: true });
+    image.addEventListener("error", () => {
+        status.textContent = "Thumbnail image could not be loaded.";
+    }, { once: true });
 
-            image.src = new URL(
-                metadata.thumbnail,
-                document.baseURI
-            ).href;
-        }
+    figure.hidden = false;
 
+    image.src = new URL(
+        metadata.thumbnail,
+        document.baseURI
+    ).href;
+}
+        
         status.textContent = "Metadata loaded successfully.";
 
     } catch (error) {
