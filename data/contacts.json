@@ -16,7 +16,7 @@
       "name": "Owner Name",
       "role": "Owner",
       "organization": "No",
-      "photo": ""
+      "photo": "data/site/social-image.png"
     },
 
     "methods": [
