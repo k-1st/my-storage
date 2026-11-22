@@ -1,9 +1,55 @@
 {
-    "title": "Index Page",
-    "date": "2026-05-18",
-    "description": "A short description of this Index page.",
-    "tags": ["technology", "research"],
-    "keywords": ["web", "development"],
-    "searchText": "Additional text used for searching.",
-    "featured": false
+  "title": "Home",
+  "date": "2026-11-22",
+  "description": "Welcome to My Archive. Explore our collection, discover featured materials and learn about this project.",
+  "tags": ["home", "archive", "welcome"],
+  "keywords": ["welcome", "featured", "recent", "archive"],
+  "searchText": "Homepage introduction and featured archive collection.",
+  "featured": false,
+
+  "home": {
+    "welcome": {
+      "enabled": true,
+      "heading": "Welcome to My Archive",
+      "subtitle": "A place for preserving knowledge, history and information.",
+      "description": "Explore a growing collection of documents, articles, research, photographs and other materials. Discover information, browse the archive and learn more about the project.",
+      "image": "https://k-1st.github.io/my-archive/data/archive/folder/media/cbarch.png",
+      "primaryButton": {
+        "label": "Explore the Archive",
+        "action": "archive"
+      },
+      "secondaryButton": {
+        "label": "Search Collection",
+        "action": "search"
+      }
+    },
+
+    "featured": {
+      "enabled": true,
+      "heading": "Featured Collection",
+      "description": "Selected materials from our archive.",
+      "limit": 4
+    },
+
+    "recent": {
+      "enabled": true,
+      "heading": "Recently Added",
+      "description": "Discover the latest additions to the collection.",
+      "limit": 5
+    },
+
+    "about": {
+      "enabled": true,
+      "heading": "About This Archive",
+      "description": "Learn about the archive, its purpose, history and the people behind it.",
+      "buttonLabel": "Learn More"
+    },
+
+    "contact": {
+      "enabled": true,
+      "heading": "Get in Touch",
+      "description": "Have a question or want to get in touch? Find the available contact information here.",
+      "buttonLabel": "Contact Us"
+    }
+  }
 }
