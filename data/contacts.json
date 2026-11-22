@@ -13,9 +13,9 @@
     "intro": "You can reach us using any of the contact options below.",
 
     "owner": {
-      "name": "",
-      "role": "",
-      "organization": "",
+      "name": "Owner Name",
+      "role": "Owner",
+      "organization": "No",
       "photo": ""
     },
 
