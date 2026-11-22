@@ -1,9 +1,117 @@
 {
-    "title": "About Page",
-    "date": "2026-05-18",
-    "description": "A short description of this About page.",
-    "tags": ["technology", "research"],
-    "keywords": ["web", "development"],
-    "searchText": "Additional text used for searching.",
-    "featured": false
+  "title": "About",
+  "date": "2026-05-18",
+  "description": "Learn about this archive, its history, its purpose and the people behind it.",
+  "tags": ["archive", "history", "about"],
+  "keywords": ["archive", "owner", "founder", "organization", "collection"],
+  "searchText": "About this archive, its background, history, owner and collection.",
+  "featured": false,
+
+  "about": {
+    "archive": {
+      "name": "My Archive",
+      "subtitle": "A place for preserving knowledge, history and information.",
+      "description": "Welcome to My Archive. This project brings together documents, articles, research, photographs and other materials in one organized digital collection. Its purpose is to preserve useful information and make it accessible for future reference.",
+      "image": "https://k-1st.github.io/my-archive/data/archive/folder/media/cbarch.png",
+      "established": "2026",
+      "type": "Independent digital archive",
+      "status": "Active"
+    },
+
+    "history": {
+      "heading": "Our History",
+      "text": "Every archive begins with an idea. This project started with a simple goal: to collect, organize and preserve information in a place where it can remain accessible. Over time, the collection has grown into a structured digital archive.",
+      "milestones": [
+        {
+          "year": "2026",
+          "title": "The Beginning",
+          "description": "The initial idea and structure of the archive were established."
+        },
+        {
+          "year": "2026",
+          "title": "Digital Collection",
+          "description": "The first materials were organized and published in the archive."
+        },
+        {
+          "year": "2026",
+          "title": "Further Development",
+          "description": "New categories, documentation and archive features were introduced."
+        }
+      ]
+    },
+
+    "owner": {
+      "heading": "About the Owner",
+      "name": "Example Archive Owner",
+      "role": "Founder and Administrator",
+      "photo": "https://k-1st.github.io/my-archive/data/site/social-image.png",
+      "biography": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. The archive owner is responsible for the direction, organization and development of this project. This section can contain a personal biography, professional background, interests and other relevant information.",
+      "website": "https://example.com",
+      "location": "Example City, Example Country"
+    },
+
+    "organization": {
+      "heading": "Organization",
+      "name": "Example Independent Project",
+      "type": "Independent initiative",
+      "description": "This archive is currently presented as an independent project. It may be operated by an individual, a group, a company, an institution or a non-profit organization.",
+      "website": "https://example.com",
+      "people": [
+        {
+          "name": "Example Contributor",
+          "role": "Research and Documentation"
+        },
+        {
+          "name": "Example Editor",
+          "role": "Editorial Support"
+        }
+      ]
+    },
+
+    "collection": {
+      "heading": "About the Collection",
+      "description": "The archive contains a growing collection of digital materials. Each item can be documented, categorized and connected with other related materials.",
+      "categories": [
+        "Documents and publications",
+        "Historical materials",
+        "Research and references",
+        "Photographs and media",
+        "Articles and educational resources"
+      ],
+      "approach": "Materials are organized to support discovery, reference and long-term preservation. Descriptions and related information may be added to individual archive entries."
+    },
+
+    "mission": {
+      "heading": "Our Mission",
+      "text": "Our mission is to preserve information, support access to knowledge and create an organized resource that can be useful to researchers, readers and future generations."
+    },
+
+    "sections": [
+      {
+        "heading": "Purpose and Objectives",
+        "text": "The archive aims to collect and organize useful information, preserve digital materials and provide a convenient way to explore different subjects. Its structure can develop as the collection grows."
+      },
+      {
+        "heading": "Sources and Documentation",
+        "text": "Information may come from publications, historical documents, research, public resources and other materials. Individual archive entries may include descriptions, dates, references and source information."
+      },
+      {
+        "heading": "Acknowledgements",
+        "text": "We would like to thank everyone who contributes knowledge, materials, research and support to the development of this project."
+      }
+    ],
+
+    "relatedLinks": [
+      {
+        "label": "Example Resource",
+        "description": "An example of an external reference or related project.",
+        "url": "https://example.com"
+      },
+      {
+        "label": "Documentation",
+        "description": "Additional information and project documentation.",
+        "url": "https://example.org"
+      }
+    ]
+  }
 }
