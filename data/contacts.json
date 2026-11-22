@@ -1,9 +1,73 @@
 {
-    "title": "ContactsPage",
-    "date": "2026-05-18",
-    "description": "A short description of this Contacts page.",
-    "tags": ["technology", "research"],
-    "keywords": ["web", "development"],
-    "searchText": "Additional text used for searching.",
-    "featured": false
+  "title": "Contacts",
+  "date": "2026-05-18",
+  "description": "Public contact information and ways to reach the archive owner.",
+  "tags": ["contact", "communication"],
+  "keywords": ["email", "phone", "address", "social media"],
+  "searchText": "Contact information for the archive owner.",
+  "featured": false,
+
+  "contact": {
+    "enabled": true,
+    "heading": "Get in Touch",
+    "intro": "You can reach us using any of the contact options below.",
+
+    "owner": {
+      "name": "",
+      "role": "",
+      "organization": "",
+      "photo": ""
+    },
+
+    "methods": [
+      {
+        "type": "email",
+        "label": "Email",
+        "value": "",
+        "url": ""
+      },
+      {
+        "type": "phone",
+        "label": "Phone",
+        "value": "",
+        "url": ""
+      },
+      {
+        "type": "whatsapp",
+        "label": "WhatsApp",
+        "value": "",
+        "url": ""
+      },
+      {
+        "type": "telegram",
+        "label": "Telegram",
+        "value": "",
+        "url": ""
+      }
+    ],
+
+    "addresses": [
+      {
+        "label": "Main address",
+        "street": "",
+        "city": "",
+        "region": "",
+        "postalCode": "",
+        "country": "",
+        "mapUrl": ""
+      }
+    ],
+
+    "websites": [],
+    "socialLinks": [],
+
+    "hours": {
+      "timezone": "",
+      "items": [],
+      "note": ""
+    },
+
+    "additionalLinks": [],
+    "publicNote": ""
+  }
 }
