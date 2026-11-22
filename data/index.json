@@ -13,7 +13,7 @@
       "heading": "Welcome to My Archive",
       "subtitle": "A place for preserving knowledge, history and information.",
       "description": "Explore a growing collection of documents, articles, research, photographs and other materials. Discover information, browse the archive and learn more about the project.",
-      "image": "https://k-1st.github.io/my-archive/data/archive/folder/media/cbarch.png",
+      "image": "data/archive/folder/media/cbarch.png",
       "primaryButton": {
         "label": "Explore the Archive",
         "action": "archive"
