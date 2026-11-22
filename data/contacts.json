@@ -10,64 +10,107 @@
   "contact": {
     "enabled": true,
     "heading": "Get in Touch",
-    "intro": "You can reach us using any of the contact options below.",
+    "intro": "These are sample contact details for testing the Contacts page.",
 
     "owner": {
-      "name": "Owner Name",
-      "role": "Owner",
-      "organization": "No",
+      "name": "Example Archive Owner",
+      "role": "Archive Owner",
+      "organization": "Example Organization",
       "photo": "data/site/social-image.png"
     },
 
     "methods": [
       {
         "type": "email",
-        "label": "Email",
-        "value": "",
+        "label": "General inquiries",
+        "value": "hello@example.com",
         "url": ""
       },
       {
         "type": "phone",
-        "label": "Phone",
-        "value": "",
+        "label": "Telephone",
+        "value": "+1 202-555-0147",
         "url": ""
       },
       {
         "type": "whatsapp",
-        "label": "WhatsApp",
-        "value": "",
-        "url": ""
+        "label": "WhatsApp (test)",
+        "value": "+1 202-555-0147",
+        "url": "https://example.com/whatsapp-placeholder"
       },
       {
         "type": "telegram",
-        "label": "Telegram",
-        "value": "",
-        "url": ""
+        "label": "Telegram (test)",
+        "value": "Example account",
+        "url": "https://example.com/telegram-placeholder"
       }
     ],
 
     "addresses": [
       {
-        "label": "Main address",
-        "street": "",
-        "city": "",
-        "region": "",
-        "postalCode": "",
-        "country": "",
-        "mapUrl": ""
+        "label": "Example office",
+        "street": "123 Example Street",
+        "city": "Example City",
+        "region": "Example Region",
+        "postalCode": "00000",
+        "country": "Example Country",
+        "mapUrl": "https://example.com/map-placeholder"
       }
     ],
 
-    "websites": [],
-    "socialLinks": [],
+    "websites": [
+      {
+        "label": "Official website",
+        "url": "https://example.com",
+        "description": "Example website link"
+      }
+    ],
+
+    "socialLinks": [
+      {
+        "label": "Facebook",
+        "platform": "Facebook",
+        "url": "https://example.com/facebook-placeholder"
+      },
+      {
+        "label": "Instagram",
+        "platform": "Instagram",
+        "url": "https://example.com/instagram-placeholder"
+      },
+      {
+        "label": "YouTube",
+        "platform": "YouTube",
+        "url": "https://example.com/youtube-placeholder"
+      }
+    ],
 
     "hours": {
-      "timezone": "",
-      "items": [],
-      "note": ""
+      "timezone": "UTC",
+      "items": [
+        {
+          "days": "Monday–Friday",
+          "hours": "09:00–17:00"
+        },
+        {
+          "days": "Saturday",
+          "hours": "10:00–14:00"
+        },
+        {
+          "days": "Sunday",
+          "hours": "Closed"
+        }
+      ],
+      "note": "These are example opening hours for display testing."
     },
 
-    "additionalLinks": [],
-    "publicNote": ""
+    "additionalLinks": [
+      {
+        "label": "Help and information",
+        "url": "https://example.com/help",
+        "description": "Example additional resource"
+      }
+    ],
+
+    "publicNote": "This is sample information used to test the Contacts page layout. It is not a real archive owner's contact information."
   }
 }
