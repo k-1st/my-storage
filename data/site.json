@@ -3,7 +3,7 @@
   "title": "My Archive",
   "description": "Your personal collection of archived content, organized in one place.",
   "language": "en",
-  "logo": "data/site/logo.svg",
+  "logo": "",
   "favicon": "data/site/favicon.svg",
   "socialImage": "data/site/social-image.png"
 }
